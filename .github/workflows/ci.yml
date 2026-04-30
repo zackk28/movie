@@ -17,8 +17,8 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.2"
-          extensions: mbstring, bcmath, sqlite3
+          php-version: "8.4"
+          extensions: mbstring, bcmath, sqlite3, pdo_sqlite
 
       - name: Install Composer dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader
