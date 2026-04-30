@@ -20,13 +20,14 @@ class MovieController extends Controller
     {
         $movies = $this->movieService->getAllMovies();
 
-        return view('homepage', compact('movies')); // ← ganti ini
+        return view('homepage', compact('movies'));
     }
 
     // Form tambah movie
     public function create()
     {
-        return view('input', compact('movies')); // ← ganti ini
+        $categories = \App\Models\Category::all();
+        return view('input', compact('categories'));
     }
 
     // Simpan movie baru
